@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Modifier un produit{% endblock %}
+
+{% block body %}
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    {{ form_start(productForm) }}
+                    {{ form_row(productForm.name, {
+                        label: 'Product name'
+                    }) }}
+                    {{ form_row(productForm.codeProduct) }}
+                    {{ form_row(productForm.imageUrl) }}
+                    {{ form_row(productForm.description) }}
+                    {{ form_row(productForm.price) }}
+                    {{ form_row(productForm.stars) }}
+                    {{ form_row(productForm.submit, {
+                        label: 'Modifier', attr : {
+                        'class' : 'btn btn-danger'
+                        }
+                    }) }}
+                    {{ form_end(productForm) }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -29,7 +29,7 @@ class ProductType extends AbstractType
             ->add('stars', ChoiceType::class, [
                 'choices'=>[ 0, 1, 2, 3, 4, 5],
             ])
-            ->add('imageUrl', FileType::class)
+            ->add('imageUrl', FileType::class, array('data_class' => null))
             ->add('description', TextareaType::class)
             ->add('submit', SubmitType::class, [
                 'label' => 'Publier mon produit'
